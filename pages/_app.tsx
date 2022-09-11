@@ -14,7 +14,8 @@ import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import Nav from "../components/nav";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
+import Link from "next/link";
 
 const clientSideEmotionCache = createEmotionCache();
 
@@ -43,21 +44,21 @@ function MyApp(props: MyAppProps) {
             <Component {...pageProps} />
           </Box>
           <footer className={styles.footer}>
-            <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Powered by{" "}
-              <span className={styles.logo}>
-                <Image
-                  src="/vercel.svg"
-                  alt="Vercel Logo"
-                  width={72}
-                  height={16}
-                />
-              </span>
-            </a>
+            <Box width={1} display="flex" gap={1} justifyContent="center">
+              <Typography component="span">Heidi&apos;s Place©2022</Typography>
+              <Typography component="span">•</Typography>
+              <Typography component="span">
+                <Link href="mailto:heidisplace@frontier.com">
+                  heidisplace@frontier.com
+                </Link>
+              </Typography>
+              <Typography component="span">•</Typography>
+              <Typography component="span">
+                <Link href="tel:+14254892569">(425) 489-2569</Link>
+              </Typography>
+              <Typography component="span">•</Typography>
+              <Typography component="span">Bothell, WA 98012</Typography>
+            </Box>
           </footer>
         </div>
       </ThemeProvider>

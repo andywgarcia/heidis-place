@@ -18,6 +18,7 @@ export default function Nav() {
       overflow="hidden"
       px="2rem"
       bgcolor="white"
+      zIndex="appBar"
     >
       <Link href="/">Home</Link>
       <Link href="/distinctive-framing">Distinctive Framing</Link>
